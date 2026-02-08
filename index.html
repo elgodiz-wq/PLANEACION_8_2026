@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeación Emprendimiento 8° - 2026</title>
+    <style>
+        /* --- ESTILOS CSS --- */
+        :root {
+            --primary-blue: #1e3a8a;
+            --accent-blue: #3b82f6;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --white: #ffffff;
+            --row-even: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1450px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* --- ESTILO DE ENCABEZADO SEGÚN IMAGEN --- */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header h2 {
+            color: #64748b;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .period-pill {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px; /* Estilo píldora de la imagen */
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+        }
+
+        /* --- CONTROLES --- */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            padding: 0 5px;
+        }
+
+        .search-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .search-box input {
+            width: 380px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #fdfdfd;
+        }
+
+        .year-info {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* --- TABLA SIN BORDES Y FORMATO UNIFORME --- */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            background-color: #f1f5f9; /* Fondo suave para el encabezado de tabla */
+        }
+
+        th {
+            color: var(--primary-blue);
+            font-weight: 600;
+            padding: 15px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            text-align: left;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 20px 15px;
+            font-size: 0.95rem;
+            vertical-align: top;
+            text-align: justify; /* Justificación uniforme solicitada */
+            hyphens: auto;
+            border: none;
+        }
+
+        /* Alternancia de filas */
+        tr:nth-child(even) {
+            background-color: var(--row-even);
+        }
+
+        tr:hover {
+            background-color: #e2e8f0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Planeación Curricular 2026</h1>
+        <h2>Área: Emprendimiento | Grado: 8°</h2>
+        <div class="period-pill">Primer Periodo Académico</div>
+    </header>
+
+    <div class="controls">
+        <div class="search-box">
+            <span class="search-label">Filtrar contenidos:</span>
+            <input type="text" id="searchInput" placeholder="Ej: Liderazgo, Innovación...">
+        </div>
+        <div class="year-info">
+            Año: 2026
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70px;">SEMANA</th>
+                    <th style="width: 80px;">PERIODO</th>
+                    <th style="width: 110px;">FECHA INICIAL</th>
+                    <th style="width: 110px;">FECHA FINAL</th>
+                    <th>ESTÁNDAR DE COMPETENCIA</th>
+                    <th>COMPONENTE ESTÁNDAR</th>
+                    <th>CONCEPTOS Y CONTENIDOS</th>
+                    <th>OBSERVACIONES</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    const planeacion2026 = [
+        {
+            sem: "Semana 2",
+            per: "Periodo 1",
+            ini: "02-Feb-2026",
+            fin: "06-Feb-2026",
+            est: "Contribuir a la formación de personas capaces de observar, analizar, indagar y explicar lo que sucede a su alrededor para lograr nuevas comprensiones, compartir y debatir sus inquietudes y buscar soluciones a problemáticas existentes en el mundo real.",
+            com: "Permitir que el estudiante use creativa y estratégicamente herramientas para investigar, identificar e interpretar la realidad que acontece en su contexto espacial y temporal, así como las experiencias de la vida misma.",
+            con: "Comunicación efectiva en el emprendimiento: Concepto y elementos de la comunicación. Tipos de comunicación: verbal, no verbal y escrita.",
+            obs: "Sin observaciones."
+        },
+        {
+            sem: "Semana 3",
+            per: "Periodo 1",
+            ini: "09-Feb-2026",
+            fin: "13-Feb-2026",
+            est: "Contribuir a la formación de personas capaces de observar, analizar, indagar y explicar lo que sucede a su alrededor para lograr nuevas comprensiones, compartir y debatir sus inquietudes y buscar soluciones a problemáticas existentes en el mundo real.",
+            com: "Permitir que el estudiante use creativa y estratégicamente herramientas para investigar, identificar e interpretar la realidad que acontece en su contexto espacial y temporal, así como las experiencias de la vida misma.",
+            con: "Comunicación efectiva en el emprendimiento: Barreras de la comunicación y cómo superarlas. La importancia de la asertividad y la empatía en los negocios.",
+            obs: "Sin observaciones."
+        },
+        {
+            sem: "Semana 4",
+            per: "Periodo 1",
+            ini: "16-Feb-2026",
+            fin: "20-Feb-2026",
+            est: "Contribuir a la formación de personas capaces de observar, analizar, indagar y explicar lo que sucede a su alrededor para lograr nuevas comprensiones, compartir y debatir sus inquietudes y buscar soluciones a problemáticas existentes en el mundo real.",
+            com: "Promover la reflexión y la apertura al cambio, y favorecer en el estudiante la sensibilidad frente a la realidad social y su proyección para transformar el entorno.",
+            con: "Técnicas de expresión oral y escrita, Cómo estructurar y presentar una idea de negocio. Comunicación efectiva en el emprendimiento.",
+            obs: "Actividad práctica."
+        },
+        {
+            sem: "Semana 5",
+            per: "Periodo 1",
+            ini: "23-Feb-2026",
+            fin: "27-Feb-2026",
+            est: "Contribuir a la formación de personas capaces de observar, analizar, indagar y explicar lo que sucede a su alrededor para lograr nuevas comprensiones, compartir y debatir sus inquietudes y buscar soluciones a problemáticas existentes en el mundo real.",
+            com: "Promover la reflexión y la apertura al cambio, y favorecer en el estudiante la sensibilidad frente a la realidad social y su proyección para transformar el entorno.",
+            con: "Técnicas de expresión oral y escrita Redacción de correos y mensajes formales en el ámbito empresarial. Elaboración de discursos y presentaciones persuasivas. Técnicas de persuasión y argumentación.",
+            obs: "Evaluación del tema."
+        }
+    ];
+
+    const tableBody = document.getElementById('tableBody');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderTable(items) {
+        tableBody.innerHTML = items.map(item => `
+            <tr>
+                <td>${item.sem}</td>
+                <td>${item.per}</td>
+                <td>${item.ini}</td>
+                <td>${item.fin}</td>
+                <td>${item.est}</td>
+                <td>${item.com}</td>
+                <td>${item.con}</td>
+                <td>${item.obs}</td>
+            </tr>
+        `).join('');
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const filtered = planeacion2026.filter(item => 
+            Object.values(item).some(val => val.toLowerCase().includes(query))
+        );
+        renderTable(filtered);
+    });
+
+    renderTable(planeacion2026);
+</script>
+
+</body>
+</html>
